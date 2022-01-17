@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div  class="container">
+    <div  class="row justify-content-center">
+      <div  class="col-4">
+      <h2  class="text-center">Вход пользователя</h2>
+
+
+
+<div class="card">
+<div class="card-body">
+
+<form method="post" action="{% url 'login' %}">
+{% csrf_token %}
+
+  Имя:
+  {{ form.username }}<br><br>
+
+
+
+  {{ form.password.label_tag }}
+  {{ form.password }}
+
+<input type="submit" value="Войти" />
+<input type="hidden" name="next" value="{{ next }}" />
+</form>
+
+{# Assumes you setup the password_reset view in your URLconf #}
+<!-- <p> <a href="{% url 'password_reset' %}">Забыл пароль?</a></p> --!>
+
+</div>
+</div>
+
+      </div>
+    </div>
+  </div>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+{% endblock content %}

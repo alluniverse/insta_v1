@@ -1,0 +1,41 @@
+#header
+{
+    width: 100%;
+    margin: 0px;
+    text-align: center;
+    background-color:#ff9999;
+}
+#right
+{
+  float: right;
+  width: 200px;
+  margin: 20px 0px 0px 0px;
+  text-align: right;
+
+  background-color:#99ff99;
+
+}
+#middle
+{
+    margin: 20px 220px 10px 220px;
+    background-color:#9999ff;
+
+    text-align: center;
+}
+#footer
+{
+    margin: 0;
+    border: solid 1px Dark;
+    background-color: #dbc1c1;
+    font-size: 20px;
+    text-align: center;
+    clear:both;
+}
+#left
+{
+    background-color:#fdff5e;
+    margin: 20px 0px 0px 0px;
+    width: 200px;
+    float:left;
+    height: 100%;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static "css/style.css" %}" />
+    <link  rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"  crossorigin="anonymous">
+    <title>{% block title %}Title{% endblock title %}</title>
+</head>
+<body>
+
+<!-- шапка -->
+<div id="header"><h1>INSTAGRAM</h1></div>
+
+<!-- левый вертикальный -->
+<div id="left">
+    {% load menubuilder %}{% menu main %}
+    {% for item in menuitems %}<a href="{{ item.url }}" title="{{ item.title|escape }}"{% if item.current %} class='current'{% endif %}>{{ item.title }}</a><br>
+    {% endfor %}
+</div>
+<!-- правый вертикальный -->
+<div id="right">Правый блок</div>
+<!-- центральный блок (для динамического контента)-->
+<div id="middle">{% block content %}{% endblock content %}</div>
+
+<!-- футер -->
+<div id="footer">MegaInstagram by DS</div>
+
+</body>
+</html>

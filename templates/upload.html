@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Загрузить фото{% endblock title %}
+
+{% block content %}
+<form method="post" enctype="multipart/form-data" action="/upload/add">
+  {% csrf_token %}
+   {{ form.as_p }}
+  <button type="submit">Загрузить</button>
+</form>
+
+{% if img_obj %}
+  <h3>Изображение загружено: {{img_obj.title}}</h3>
+  <img src="{{ img_obj.image.url}}" alt="connect" style="max-height:150px">
+{% endif %}
+
+{% endblock content %}

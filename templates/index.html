@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if images.count > 0 %}
+
+<table width="100%">
+    {% for image in images %}
+    <tr>
+        <td>
+            <img src=../media/{{image.image}} width="30%"><br><font size="1">id: {{image.id}}</font> <br> {{image.title}}<br>
+            {{image.likes}}&nbsp<a href="likes/{{image.id}}"><img src=../static/images/like.png width="2%"></a>
+
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+{% endif %}
+
+{% endblock content %}

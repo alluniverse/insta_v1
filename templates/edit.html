@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Редактировать фото{% endblock title %}
+
+{% block content %}
+
+{% if images.count > 0 %}
+<h2>Удалить изображение</h2>
+<table width="50%">
+
+    <tr><th>ID</th><th>Подпись</th><th>Изображение</th></tr>
+
+    {% for image in images %}
+            <tr>
+                <td>{{image.id}}</td>
+                <td>{{image.title}}</td>
+                <td align="center"><img src=../media/{{image.image}} width="10%"></td>
+                <td><font color="blue"><a href="{{image.id}}">del</a></font></td>
+            </tr>
+    {% endfor %}
+
+</table>
+
+{% endif %}
+
+{% endblock content %}
