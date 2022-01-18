@@ -10,10 +10,10 @@
 <body>
 
 <!-- шапка -->
-<div id="header"><h1>INSTAGRAM</h1></div>
+<header><h1>INSTAGRAM</h1></header>
 
 <!-- левый вертикальный -->
-<div id="left">
+<aside>
     {% load menubuilder %}{% menu main %}
     {% for item in menuitems %}
     <nav class="navbar navbar-light bg-light">
@@ -23,14 +23,13 @@
     </a></div></nav>
 
     {% endfor %}
-</div>
-<!-- правый вертикальный -->
-<div id="right">Правый блок</div>
+</aside>
+
 <!-- центральный блок (для динамического контента)-->
-<div id="middle">{% block content %}{% endblock content %}</div>
+<article>{% block content %}{% endblock content %}</article>
 
 <!-- футер -->
-<div id="footer">MegaInstagram by DS</div>
+<footer>MegaInstagram by DS</footer>
 
 </body>
 </html>

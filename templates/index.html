@@ -4,7 +4,7 @@
 
 {% if images.count > 0 %}
 
-<table width="100%">
+<!--<table width="100%">
     {% for image in images %}
     <tr>
         <td>
@@ -15,7 +15,16 @@
     </tr>
     {% endfor %}
 
-</table>
+</table>-->
+<!--<br><font size="1">id: {{image.id}}</font> <br> {{image.title}}<br>
+            {{image.likes}}&nbsp<a href="likes/{{image.id}}"><img src=../static/images/like.png width="2%"></a>-->
+<main>
+    {% for image in images %}
+    <article2>
+        <img src=../media/{{image.image}} width="20%">
+    </article2>
+    {% endfor %}
+</main>
 
 {% endif %}
 
