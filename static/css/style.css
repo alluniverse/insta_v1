@@ -109,3 +109,15 @@ footer {
     float:left;
     height: 100%;
 }
+
+#grid {
+  width: 800px;
+  display: grid;
+  grid-template-areas: "a a a";
+  gap: 10px;
+  grid-auto-rows: 300px;
+}
+
+#grid > div {
+  /*background-color: lime;*/
+}

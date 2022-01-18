@@ -18,13 +18,25 @@
 </table>-->
 <!--<br><font size="1">id: {{image.id}}</font> <br> {{image.title}}<br>
             {{image.likes}}&nbsp<a href="likes/{{image.id}}"><img src=../static/images/like.png width="2%"></a>-->
-<main>
+<!--<main>
     {% for image in images %}
     <article2>
         <img src=../media/{{image.image}} width="20%">
     </article2>
     {% endfor %}
-</main>
+</main>-->
+
+
+<div id="grid">
+    {% for image in images %}
+  <div id="item"><img src=../media/{{image.image}} height="200px"><br><font size="1">id: {{image.id}}</font> <br> {{image.title}}<br>
+            {{image.likes}}&nbsp<a href="likes/{{image.id}}"><img src=../static/images/like.png width="5%"></a></div>
+
+  {% endfor %}
+</div>
+
+
+
 
 {% endif %}
 
